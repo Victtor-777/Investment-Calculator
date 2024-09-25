@@ -1,5 +1,5 @@
 import { CurrencyPipe } from '@angular/common';
-import { Component, EventEmitter, Input, input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 type ResultProps = {
   year: number;
@@ -18,5 +18,5 @@ type ResultProps = {
   styleUrl: './investment-reasults.component.css',
 })
 export class InvestmentReasultsComponent {
-  @Input() results?: ResultProps;
+  results = input<ResultProps>();
 }
