@@ -1,3 +1,4 @@
+import { CurrencyPipe } from '@angular/common';
 import { Component, EventEmitter, Input, input } from '@angular/core';
 
 type ResultProps = {
@@ -12,7 +13,7 @@ type ResultProps = {
 @Component({
   selector: 'app-investment-reasults',
   standalone: true,
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './investment-reasults.component.html',
   styleUrl: './investment-reasults.component.css',
 })
