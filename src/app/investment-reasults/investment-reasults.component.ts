@@ -1,5 +1,6 @@
 import { CurrencyPipe } from '@angular/common';
-import { Component, input } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { InvestmentService } from '../investment.service';
 
 type ResultProps = {
   year: number;
@@ -18,5 +19,9 @@ type ResultProps = {
   styleUrl: './investment-reasults.component.css',
 })
 export class InvestmentReasultsComponent {
-  results = input<ResultProps>();
+  private investmentService = inject(InvestmentService);
+
+  get results() {
+    return this.investmentService.resultData;
+  }
 }
